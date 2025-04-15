@@ -1,19 +1,21 @@
+#include <string>
+
 class Game{
     private:
-        std::string current_player;
         std::string winner;
+        std::string first_player;
+        std::string second_player;
     protected:
-        virtual bool is_valid_move(const std::string& move) const = 0;
         virtual void set_winner(const std::string& winner){ this->winner = winner;}
-        virtual void set_current_player(const std::string& current_player){ this->current_player = current_player;}
 
     public:
-        Game();
-        virtual ~Game();
+        Game(std::string first_player, std::string second_player){
+            this->first_player = first_player;
+            this->second_player = second_player;
+        }
+        virtual ~Game(){}
         virtual bool is_game_over() const = 0;
-        virtual void make_move(const std::string& move) = 0;
-        virtual std::string get_current_player() const{ return current_player;}
         virtual std::string get_winner() const{ return winner;}
         virtual void render() const = 0;
         
-}
+};

@@ -21,6 +21,7 @@ include_directories(
 # Add executables
 add_executable(server src/server/main.cpp)
 add_executable(client src/client/main.cpp)
+add_executable(tic_tac_toe src/tic_tac_toe_main.cpp src/common/games/tic_tac_toe/tic_tac_toe.cpp)
 
 # Link libraries
 target_link_libraries(server
