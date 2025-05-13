@@ -118,8 +118,8 @@ void test_board_rendering() {
 }
 
 int main() {
-    std::cout << "Starting Tic Tac Toe tests...\n\n";
-    
+    // std::cout << "Starting Tic Tac Toe tests...\n\n";
+    std::cout << "Running tests...\n";
     test_valid_moves();
     test_win_conditions();
     test_game_state();
