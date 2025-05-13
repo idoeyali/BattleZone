@@ -1,3 +1,5 @@
+#pragma once
+
 // Game-related enums and types
 enum class GameType {
     TIC_TAC_TOE,
